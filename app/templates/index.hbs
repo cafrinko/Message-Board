@@ -1,7 +1,7 @@
 <div class="container">
   <ul>
     {{#each model as |question|}}
-       <li><strong>{{question.content}}</strong><br>{{question.author}}</li>
+       {{question-tile question=question}}
     {{/each}}
   </ul>
 </div>
