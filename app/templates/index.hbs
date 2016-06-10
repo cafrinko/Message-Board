@@ -1,5 +1,7 @@
-<ul>
-  {{#each model as |question|}}
-     <li>{{question.content}} {{question.author}}</li>
-  {{/each}}
-</ul>
+<div class="container">
+  <ul>
+    {{#each model as |question|}}
+       <li><strong>{{question.content}}</strong><br>{{question.author}}</li>
+    {{/each}}
+  </ul>
+</div>
