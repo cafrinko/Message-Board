@@ -1,7 +1,12 @@
 <div class="container">
-  <ul>
-    {{#each model as |question|}}
-       {{question-tile question=question}}
-    {{/each}}
-  </ul>
+
+{{new-question save2="save3"}}
+<br>
+  <div>
+    <ul>
+      {{#each model as |question|}}
+         {{question-tile question=question}}
+      {{/each}}
+    </ul>
+  </div>
 </div>
