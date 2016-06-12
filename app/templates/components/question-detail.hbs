@@ -1,1 +1,6 @@
 <button {{action 'delete' question}}>Delete</button>
+
+<ul>
+  {{#each question.answers as |answer|}}
+  <li>{{answer.content}}<br>{{answer.author}}</li>{{/each}}
+</ul>
