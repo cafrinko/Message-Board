@@ -1,5 +1,7 @@
 <button {{action 'delete' question}}>Delete</button>
-
+<br><br>
+<strong>{{popularity}}</strong>
+<br>
 <ul>
   {{#each question.answers as |answer|}}
   <li>{{answer.content}}<br>{{answer.author}}</li>{{/each}}
