@@ -2,12 +2,18 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
-  popularity: Ember.computed('question.answers.length', function() {
+  answerNumber: Ember.computed('question.answers.length', function() {
     // console.log('question.answers.length');
     return this.get('question.answers.length') + ' Answers';
   }),
 
+  favoriteQuestions: Ember.inject.service(),
+
   actions: {
+    addtoFavQuestions(question) {
+      this.get('favoriteQuestions').add(question);
+    },
+
     update(question, params) {
       this.sendAction('update', question, params);
     },
