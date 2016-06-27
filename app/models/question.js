@@ -8,3 +8,6 @@ export default DS.Model.extend({
   notes: DS.attr(),
   answers: DS.hasMany('answer', { async: true })
 });
+// favoriteQuestions: Ember.inject.service(),
+// onFavorites: Ember.computed('favoriteQuestions.questions.[]', function(){
+//   return this.get('favoriteQuestions').includes(this);

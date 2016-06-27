@@ -10,13 +10,15 @@ export default Ember.Component.extend({
   favoriteQuestions: Ember.inject.service(),
 
   actions: {
-    addtoFavQuestions(question) {
+    addToFavQuestions(question) {
       this.get('favoriteQuestions').add(question);
+      // console.log(this.get('favoriteQuestions.question'));
     },
 
     update(question, params) {
       this.sendAction('update', question, params);
     },
+
     delete(question) {
       if (confirm('Are you sure you want to delete this question?')) {
         this.sendAction('destroyQuestion', question);
