@@ -5,13 +5,6 @@ export default Ember.Route.extend({
     return this.store.findAll('question');
   },
 
-//sorts questions by number of answers in descending order
-  //defines the parameter of number of answers in a question
-  // questionPopularity: Ember.computed('question', 'question.answers.length', function() {
-  //   //loops through each question and pulls out the
-  //   return this.get('question.');
-  // }),
-
   actions: {
     save3(params) {
       var newQuestion = this.store.createRecord('question', params);

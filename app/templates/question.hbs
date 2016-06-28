@@ -1,11 +1,8 @@
 <h3>{{model.content}}</h3>
 <h4>{{model.author}}</h4>
 <h4>{{model.notes}}</h4>
-<br>
-<!-- {{#if model.onFavorites}}
-  Already on favorites!
-  {{else}} -->
+
 {{update-question question=model update="update"}}
 {{question-detail question=model destroyQuestion="destroyQuestion"}}
 
-{{new-answer saveTwo="saveThree" question=model}}
+{{new-answer saveTwo="saveThree"}}

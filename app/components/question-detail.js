@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
   answerNumber: Ember.computed('question.answers.length', function() {
-    // console.log('question.answers.length');
     return this.get('question.answers.length') + ' Answers';
   }),
 
@@ -12,7 +11,6 @@ export default Ember.Component.extend({
   actions: {
     addToFavQuestions(question) {
       this.get('favoriteQuestions').add(question);
-      // console.log(this.get('favoriteQuestions.question'));
     },
 
     update(question, params) {
